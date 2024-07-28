@@ -19,8 +19,7 @@ def handle_disconnect():
     
 @socketio.on("message")
 def handle_message(message):
-    print("Message recived")
-    print(message)
+    print("Message: {message}")
     socketio.emit("message", message)
 
 if __name__ == "__main__":
